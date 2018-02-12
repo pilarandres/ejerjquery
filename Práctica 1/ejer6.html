@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sexto ejercicio JQuery</title>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous">
+    </script>
+
+    <script>
+      $('document').ready(function()
+      {
+        $('#mostrar').click(function()
+        {
+          $('img').fadeOut(2000,function()
+          {
+            $('img').slideDown(3000,function()
+            {
+              $('img').slideUp(1000,function()
+              {
+                $('img').fadeIn(500);
+              });
+            });
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="imagen">
+      <img src=img/bateria-guitarra.jpg width="313" height="250">
+    </div>
+
+    <p>
+      <input type="button" id="mostrar" name="callback" value="efectos_callback">
+    </p>
+  </body>
+</html>

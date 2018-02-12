@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cuarto ejercicio JQuery</title>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous">
+    </script>
+
+    <script>
+      var s=0;
+
+      $(document).ready(function()
+      {
+        $("#check").change(function()
+        {
+          if( $('#check').prop('checked'))
+          {
+            $("span").append("<input type='text' name='resultado' id='resultado'>"); //Crear dinámicamente
+
+            var num1 = $("#numero1").val();
+            var num2 = $("#numero2").val();
+            var resultado = parseInt(num1)+parseInt(num2);
+
+            $("#resultado").val(resultado);
+          }
+          else
+          {
+            $("#resultado").remove();
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <form>
+      Primer número <input type="text" name="numero1" id="numero1" placeholder="Introduce un número."></br>
+      Segundo número <input type="text" name="numero2" id="numero2" placeholder="Introduce otro número."></br>
+      Selecciona el checkbox para ver el resultado: <input type="checkbox" name="check" value="check" id="check">
+    </form>
+    <span></span>
+  </body>
+</html>

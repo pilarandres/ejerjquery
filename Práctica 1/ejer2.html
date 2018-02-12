@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Segundo ejercicio JQuery</title>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous">
+    </script>
+
+    <script>
+      $(document).ready(function()
+      {
+        $("#ocultar").click(function(event)
+        {
+          $("#imagen").hide("slow");
+        });
+
+        $("#mostrar").click(function(event)
+        {
+          $("#imagen").show(3000);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="imagen">
+      <img src=img/bateria-guitarra.jpg width="313" height="250">
+    </div>
+
+    <p>
+      <input type="button" id="mostrar" name="mostrar_imagen" value="Mostrar_imagen">
+      <input type="button" id="ocultar" name="ocultar_imagen" value="Ocultar_imagen">
+    </p>
+  </body>
+</html>

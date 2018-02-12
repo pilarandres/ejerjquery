@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Quinto ejercicio JQuery</title>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous">
+    </script>
+
+    <style type="text/css">
+      .clasecss
+      {
+        font-size: 16pt;
+      }
+    </style>
+
+    <script>
+    $(document).ready(function()
+    {
+      $("p").mouseover(function()
+      {
+        $("p").addClass("clasecss");
+      });
+      $("p").mouseout(function()
+      {
+        $("p").removeClass("clasecss");
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+      <p>Este párrafo cambiará de tamaño al pasar el ratón por encima</p>
+    </div>
+  </body>
+</html>

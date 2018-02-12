@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Tercer ejercicio del Anexo 2 Ajax-JQuery</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+  </head>
+
+  <body>
+    <h1>Tercer ejercicio del Anexo 2 Ajax-JQuery</h1>
+
+    <input type="button" name="mostrar" id="mostrar" value="Mostrar contenido"><br/>
+    <div id="contenedor"></div>
+
+    <script>
+      $(document).ready(function()
+      {
+        $("#mostrar").click(function()
+        {
+          $.getScript( "ejer3.js" );
+        });
+      });
+    </script>
+  </body>
+</html>

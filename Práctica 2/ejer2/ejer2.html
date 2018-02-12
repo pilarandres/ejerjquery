@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Segundo ejercicio Segunda Práctica JQuery</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+    $(document).ready(function()
+    {
+      $("#enlaceajax").click(function(evento)
+      {
+        evento.preventDefault();
+        $("#destino").load("carga_pagina.html");
+      });
+    })
+    </script>
+  </head>
+
+  <body>
+    <h1><center>Segundo ejercicio Segunda Práctica JQuery</center></h1>
+    <a href="#" id="enlaceajax">Haz clic!</a>
+    <br>
+    <div id="destino"></div>
+  </body>
+</html>
